@@ -1,6 +1,6 @@
 library(tidyverse)
 library(RGCCA)
-# ADD LINE FOR DOWLOADING THE PACKAGE
+devtools::install_github(repo="https://github.com/rgcca-factory/RGCCA.git")
 
 ncore.use <- parallel::detectCores() - 1
 set.seed(2000)
@@ -103,6 +103,9 @@ for (comp in name_components){
   
 # Estimate correlation between components
 cor(latent_variables) %>% round(2)
+
+
+  
 
 
   
